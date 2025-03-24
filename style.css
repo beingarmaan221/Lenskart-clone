@@ -1,0 +1,992 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: #f5f5f5;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.top-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+.top-links a:hover {
+    text-decoration: underline;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.user-options a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.user-options a:hover {
+    text-decoration: underline;
+}
+
+.category-nav {
+    background: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.category-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.category-nav a:hover {
+    text-decoration: underline;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap');
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+button {
+    margin: 0 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-3d {
+    background: #0084ff;
+    color: white;
+}
+
+.btn-blu {
+    background: #0066cc;
+    color: white;
+}
+
+.btn-gold {
+    background: black;
+    color: gold;
+}
+
+
+
+/* Import Stylish Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #ffffff; /* White Background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Left Section (Logo & Phone) */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.navbar-left .phone {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left .phone i {
+    font-size: 20px;
+    color: #c90000; /* Red Phone Icon */
+    margin-right: 6px;
+}
+
+/* Center Section (Search Bar) */
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-center input {
+    width: 60%;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Right Section (Links & Icons) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.navbar-right a:hover {
+    opacity: 0.7;
+}
+
+/* Icons Styling */
+.navbar-right i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+
+
+
+.card {
+    width: 180px;
+    height: 220px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    background: lightgray;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+    /* Product Section */
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg,#141414, #f1efee);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #ddd; /* Placeholder */
+}
+
+.product h3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.shop-btn {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #ffeb3b;
+    color: #222;
+}
+
+.tag-button {
+    background: #2c2c54;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.glasses-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glasses-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .glasses-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* Glasses Section */
+.glasses-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0084ff, #fad0c4);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+.glasses-section:hover {
+    transform: translateY(-5px);
+}
+
+.glasses-content {
+    max-width: 50%;
+    color: #fff;
+    text-align: left;
+}
+
+.glasses-content h2 {
+    font-size: 32px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+.glasses-content h2 span {
+    color: #ffeb3b;
+    font-style: italic;
+}
+
+.glasses-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.shop-btn {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #ffeb3b;
+    color: #222;
+}
+
+.tag-button {
+    background: #2c2c54;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.glasses-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glasses-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .glasses-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* 
+.purpose-section {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 2rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.discover {
+    font-size: 1.5rem;
+    color: #777;
+    font-style: italic;
+} */
+
+
+
+
+
+
+
+.banner {
+    width: 100%;
+    height: 50vh; /* Full screen height */
+    background: #E6F7F1;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #333;
+    font-weight: 400;
+}
+
+.main-text {
+    font-size: 70px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #121212;
+    margin: 10px 0;
+}
+
+.discover-btn {
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid #121212;
+    background: transparent;
+    color: #121212;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+
+}
+
+.discover-btn:hover {
+    background: #121212;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+
+
+.carousel-item img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #eff2f5;
+    text-align: left;
+}
+
+.carousel-text h1 {
+    font-size: 55px;
+    font-family: 'Playfair Display', serif;
+}
+
+.carousel-text h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.carousel-text p {
+    font-size: 10px;
+    margin: 10px 0;
+}
+
+.shop-now {
+    background: #4f4fe6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.shop-now:hover {
+    background: #1f2020;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: black;
+}
+
+
+
+
+ */
+
+
+ .carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #003366;
+    text-align: left;
+}
+
+.carousel-text h1 {
+    font-size: 64px;
+    font-family: 'Playfair Display', serif;
+}
+
+.carousel-text h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.carousel-text p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.shop-now {
+    background: #000033;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.shop-now:hover {
+    background: #0055cc;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Our Brands Section */
+.brands-section {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.brands-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.brands-title::before,
+.brands-title::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 1px;
+    background: black;
+    position: absolute;
+    top: 50%;
+}
+
+.brands-title::before { left: 10%; }
+.brands-title::after { right: 10%; }
+
+.brands-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #005a6f; /* Adjust the color as needed */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.brands-text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.brands-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.brands-image {
+    flex: 1;
+    text-align: right;
+}
+
+.brands-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .brands-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .brands-text, .brands-image {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+/* Eyeglasses Section */
+.eyeglasses-section {
+    padding: 20px 0;
+    text-align: left;
+}
+
+.eyeglasses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.eyeglasses-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.view-range {
+    font-size: 14px;
+    text-decoration: none;
+    color: #0097a7;
+    font-weight: bold;
+}
+
+.eyeglasses-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.eyeglass-item img {
+    max-width: 450px;
+    height: auto;
+    display: block;
+}
+
+/* Arrow Icon */
+.arrow {
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+
+
+
+
+/* Premium Eyewear Section */
+.premium-eyewear {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.premium-eyewear h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.premium-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.premium-text {
+    max-width: 40%;
+    text-align: left;
+}
+
+.premium-text p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.premium-text h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.shop-now {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shop-now:hover {
+    background: black;
+    color: white;
+}
+
+.premium-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-column {
+    width: 30%;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #f8c102;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+}
+
+.footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f8c102;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ddd;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f8c102;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-column {
+        width: 100%;
+    }
+}
