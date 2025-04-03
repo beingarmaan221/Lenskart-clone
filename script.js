@@ -1,74 +1,48 @@
-// const images = [
-//     "glass1.png",
-//     "glass2.png",
-//     "glass3.png",
-//     "glass4.png",
-//     "glass5.png"
-// ];
 
-// let index = 0;
-// const glassesImage = document.getElementById("glassesImage");
-
-// function changeImage() {
-//     glassesImage.style.opacity = 0; // Fade out effect
-//     setTimeout(() => {
-//         glassesImage.src = images[index]; 
-//         glassesImage.style.opacity = 1; // Fade in effect
-//         index = (index + 1) % images.length;
-//     }, 500);
-// }
-
-// setInterval(changeImage, 2000);
-
-
-
-
-// document.addEventListener("DOMContentLoaded"), function () {
-//     const carousel = document.querySelector('.carousel');
-//     const slides = Array.from(document.querySelectorAll('.slide')); // Convert NodeList to Array
-//     const prev = document.querySelector('.prev');
-//     const next = document.querySelector('.next');
-
-//     let index = 0;
-
-//     function showSlide(newIndex) {
-//         if (newIndex >= slides.length) {
-//             index = 0;
-//         } else if (newIndex < 0) {
-//             index = slides.length - 1;
-//         } else {
-//             index = newIndex;
-//         }
-//         carousel.style.transform = `translateX(-${index * 100}%)`;
-//     }
-
-//     // Auto-slide every 4 seconds
-//     setInterval(() => {
-//         showSlide(index + 1);
-//     }, 4000);
-
-//     prev.addEventListener('click', () => {
-//         showSlide(index - 1);
-//     });
-
-//     next.addEventListener('click', () => {
-//         showSlide(index + 1);
-//     });
-// };
-
-
-let currentIndex = 0;
-
-function moveSlide(direction) {
+document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
     const slides = document.querySelectorAll('.carousel-item');
-    currentIndex += direction;
+    const totalSlides = slides.length;
+    const carouselInner = document.querySelector('.carousel-inner');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
 
-    if (currentIndex >= slides.length) {
-        currentIndex = 0;
-    } else if (currentIndex < 0) {
-        currentIndex = slides.length - 1;
+    function moveSlide(direction) {
+        currentIndex += direction;
+        if (currentIndex >= totalSlides) {
+            currentIndex = 0;
+        } else if (currentIndex < 0) {
+            currentIndex = totalSlides - 1;
+        }
+        updateSlide();
     }
 
-    document.querySelector('.carousel-inner').style.transform = 
-        `translateX(-${currentIndex * 100}%)`;
-}
+    function updateSlide() {
+        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Auto Slide Function
+    function autoSlide() {
+        moveSlide(1);
+    }
+
+    // Start Auto Slide
+    let autoSlideInterval = setInterval(autoSlide, 3000);
+
+    // Manual Navigation Buttons
+    prevButton.addEventListener('click', () => {
+        moveSlide(-1);
+        resetAutoSlide();
+    });
+
+    nextButton.addEventListener('click', () => {
+        moveSlide(1);
+        resetAutoSlide();
+    });
+
+    // Reset Auto-Slide on Manual Interaction
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(autoSlide, 3000);
+    }
+});
